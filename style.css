@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Anek+Malayalam:wght@100;200;300;500;600;700;800&display=swap');
+
+:root {
+    --primary-color: #ffbf69;
+    --secondary-color: #cbf3f0;
+  }
+
+body {
+    font-family: 'Anek Malayalam', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    box-sizing: border-box;
+    padding: 0 82px;
+}
+
+.navbar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    background-color: transparent;
+    transition: all 0.24s linear;
+}
+
+.navbar--scrolled {
+    color: white;
+    background-color: #333;
+}
+
+.navbar ul {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+.navbar ul li {
+    display: block;
+    margin-left: 70px;
+    padding: 36px 0;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.above-the-fold {
+    height: 100vh;
+    background-color: var(--primary-color);
+    background-image: url("images/background.png");
+    background-size: auto 96%;
+    background-position: center right;
+    background-repeat: no-repeat;
+}
+
+
+
+.above-the-fold .above-the-fold__main {
+    width: 50%;
+    height: 100%;
+    color: white;
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+}
+
+.above-the-fold .above-the-fold__main h1 {
+    margin: 42px 0;
+    line-height: 1;
+    font-size: 12vw;
+    font-weight: 800;
+}
+
+.above-the-fold .above-the-fold__cta {
+    display: block;
+    margin-top: 82px;
+    width: 256px;
+    text-align: center;
+    padding: 21px 0;
+    background-color: var(--secondary-color);
+    font-size: 32px;
+    font-weight: 500;
+    color: black;
+    text-decoration: none;
+}
+
+.main {
+    font-size: 18px;
+    line-height: 32px;
+}
+
+.main .row {
+    padding: 96px 0;
+}
+
+.main .row--centered {
+    text-align: center;
+    width: 66.66%;
+    margin: 0 auto;
+}
+
+.main .row.row--coloured {
+    background-color: var(--secondary-color);
+}
+
+.main .row.row--splitted {
+    display: flex;
+    background-image: url("images/bg-grid.png");
+    background-position: center bottom;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+}
+
+.main .row.row--splitted div {
+    width: 50%;
+}
+
+.main .row.row--splitted img {
+    width: 100%;
+}
+
+.main .row .row__title {
+    font-size: 32px;
+    font-weight: 800;
+    margin: 0 0 48px 0;
+}
+
+.main .row .row__title--centered {
+    text-align: center;
+}
+
+.main .row .row__cta {
+    display: block;
+    width: 136px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 12px 0;
+    color: black;
+    text-decoration: none;
+    background-color: var(--primary-color);
+}
+
+.main .row .row__grid {
+    display: flex;
+}
+
+.main .row .row__grid div {
+    text-align: center;
+}
+
+.main .row .row__grid img {
+    height: 156px;
+    width: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.main .row .row__grid.row__grid--x3 div {
+    width: 33.33%;
+}
+
+footer {
+    background: #333;
+    color: white;
+}
+
+footer ul {
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 42px 0;
+    color: white;
+    font-size: 16px;
+}
+
+footer ul li {
+    display: block;
+}
+
+@media (max-width: 767px) {
+
+    .wrapper {
+        padding: 0 24px;
+    }
+
+    .navbar {
+        justify-content: flex-start;
+    }
+
+    .navbar ul {
+        width: calc(100vw - 48px);
+        justify-content: space-around;
+    } 
+
+    .navbar ul li {
+        margin-left: 0;
+        padding: 18px 0;
+    }
+
+    .above-the-fold {
+        background-size: auto 66.66%;
+        background-position: center right -25vw;
+    }
+
+    .above-the-fold .above-the-fold__main {
+        width: 100%;
+        height: 100%;
+        text-align: center;
+    }
+    
+    .above-the-fold .above-the-fold__main h1 {
+        margin: 32px 0;
+        font-size: 86px;
+    }
+
+    .above-the-fold .above-the-fold__cta {
+        font-size: 24px;
+        margin: 0 auto;
+    }
+
+    .main .row {
+        padding: 48px 0;
+    }
+
+    .main .row .row__grid {
+        display: block;
+    }
+
+    .main .row .row__grid.row__grid--x3 div {
+        width: 100%;
+        margin-bottom: 48px;
+    }
+
+    .main .row .row__grid img {
+        height: auto;
+        width: 50%;
+    }
+
+    .main .row.row--splitted {
+        display: block;
+        background-image: url(images/bg-grid.png);
+        background-position: center bottom;
+        background-size: 100% auto;
+        background-repeat: no-repeat;
+    }
+
+    .main .row.row--splitted div {
+        width: 100%;
+    }
+
+    footer ul {
+        display: block;
+    }
+
+    footer ul li {
+        display: block;
+        padding: 12px;
+    }
+
+}
+
+
